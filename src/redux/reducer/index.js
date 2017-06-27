@@ -1,5 +1,5 @@
-import { toggle, sideMenu } from './reducers/siderToggleReducer.js'
-import { isFetching, getData, test } from './reducers/fetchReducer.js'
+import { toggle, sideMenu } from './siderToggleReducer.js'
+import { isFetching, getData, test } from './fetchReducer.js'
 
 export default (state = {}, action) => {
 	return {

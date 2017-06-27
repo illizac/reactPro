@@ -1,6 +1,7 @@
 import { getTestData } from '../fetch'
 
-const CHANGE_TOGGLE = 'CHANGE_TOGGLE'
+export const INCREMENT_ASYNC = 'INCREMENT_ASYNC'
+export const CHANGE_TOGGLE = 'CHANGE_TOGGLE'
 
 export const toggle = () => {
 	return {
@@ -8,8 +9,8 @@ export const toggle = () => {
 	}
 }
 
-const START_POST = 'START_POST'
-const SUCCESS_POST = 'SUCCESS_POST'
+export const START_POST = 'START_POST'
+export const SUCCESS_POST = 'SUCCESS_POST'
 
 export const startRe = () => {
 	return {
@@ -30,7 +31,7 @@ export const testFetch = () => {
 	}
 }
 
-const GET_MENU = 'GET_MENU'
+export const GET_MENU = 'GET_MENU'
 
 export const menu = json => {
 	return {
@@ -38,9 +39,3 @@ export const menu = json => {
 		data: json
 	}
 }
-
-// export const getSideMenu = () => {
-// 	return {
-// 		type: 'GET'
-// 	}
-// }
