@@ -7,7 +7,8 @@ import store from './redux/store.js'
 
 import { getSideMenu } from './redux/createAction.js'
 
-import { Home } from './redux/connect.js'
+// import { Home } from './redux/connect.js'
+import Home from './pages/home.jsx'
 
 import './assets/style/main.less'
 import Page from './page.jsx'
