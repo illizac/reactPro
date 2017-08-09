@@ -1,13 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-@connect(state => ({}), dispath => ({}))
-class CompanyTree extends React.Component{
+class CharacterManage extends React.Component{
 	constructor(props) {
 		super(props);
-		
 	}
-
 	render(){
 		return (
 
@@ -15,4 +12,4 @@ class CompanyTree extends React.Component{
 	}
 }
 
-export default CompanyTree
+export default CharacterManage

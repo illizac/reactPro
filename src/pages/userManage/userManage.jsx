@@ -5,6 +5,7 @@ const TabPane = Tabs.TabPane
 const Search = Input.Search
 import { testFetch } from '../../redux/createAction'
 import UserTable from '../Components/userTable.jsx'
+import UserForm from '../Components/userForm.jsx'
 
 @connect(state => ({
 	isFetching: state.isFetching,
@@ -66,7 +67,7 @@ class UserManage extends React.Component{
 				    	</Row>
 				    </TabPane>
 				    <TabPane tab="用户添加" key="2">
-
+				    	<UserForm></UserForm>
 				    </TabPane>
 			  	</Tabs>
 	      	</div>

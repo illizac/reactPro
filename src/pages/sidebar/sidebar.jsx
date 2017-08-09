@@ -34,7 +34,7 @@ class Sidebar extends React.Component{
                 <QueueAnim
                 component = {Menu}
                 type='left'
-                componentProps = {{theme:"dark", mode:"inline", defaultSelectedKeys:['0'], onOpenChange: this.onOpenChange, openKeys: this.state.openKeys }}>
+                componentProps = {{theme:"dark", mode:"inline", defaultSelectedKeys:['0sub0'], onOpenChange: this.onOpenChange, openKeys: this.state.openKeys }}>
                     {
                         this.props.sideMenu.map((val,index) => 
                             val.subMenu ? 

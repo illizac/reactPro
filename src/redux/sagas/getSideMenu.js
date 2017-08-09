@@ -7,7 +7,7 @@ const testMenu = [
         text: '系统管理',
         subMenu: [
             {
-                path: '/home/userManage',
+                path: 'home/userManage',
                 text: '用户管理'
             },{
                 path: '/',
