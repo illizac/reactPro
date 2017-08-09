@@ -7,22 +7,21 @@ import store from './redux/store.js'
 
 import { getSideMenu } from './redux/createAction.js'
 
-// import { Home } from './redux/connect.js'
 import Home from './pages/home.jsx'
 
 import './assets/style/main.less'
 import Page from './page.jsx'
 import Login from './pages/login.jsx'
-import User from './pages/user/user.jsx'
+import UserManage from './pages/userManage/userManage.jsx'
 
 //saga replace thunk
 // <Route path = {'/home'} component = {Home} onEnter = {() => store.dispatch(getSideMenu())}>  
 
 const routeConfig = (
 	<Route path = {'/'} component = {Page}>
-		<IndexRedirect to="/home/user" />
+		<IndexRedirect to="/home/userManage" />
 		<Route path = {'/home'} component = {Home}>
-			<Route path = {'user'} component = {User}/>
+			<Route path = {'userManage'} component = {UserManage}/>
 		</Route>
 		<Route path = {'/login'} component = {Login}/>
 	</Route>

@@ -7,11 +7,11 @@ export const isFetching = (state = false, action) => {
 		case SUCCESS_POST:
 			return false
 		default:
-			return state
+			return true
 	}
 }
 
-export const getData = (state = {}, action) => {
+export const getData = (state = [], action) => {
 	switch(action.type){
 		case SUCCESS_POST:
 			return action.data

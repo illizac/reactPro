@@ -16,7 +16,7 @@ class HeaderCol extends React.Component{
 		        type={this.props.collapsed ? 'menu-unfold' : 'menu-fold'}
 		        onClick={() => this.props.toggle()}
 		        />
-		        <Menu mode = {'horizontal'}>
+		        <Menu mode = {'horizontal'} className = 'headerMenu'>
 		        	<SubMenu title={<img className = 'avator' src = {'http://img2.woyaogexing.com/2017/06/07/c20e0818c599eea8!400x400_big.jpg'}/>}>
 		        		<MenuItemGroup title = '设置中心'>
 		        			<Menu.Item key = 'setting01'>设置</Menu.Item>

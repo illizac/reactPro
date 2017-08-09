@@ -1,34 +1,40 @@
-#root .loginwrapper{
+.loginwrapper{
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background: #ccc;
+
+	.loginForm{
+		background: #fff;
+		padding: 25px 25px 50px;
+		width: 300px;
+
+		.loginTitle{
+			font-size: 16px;
+			padding-bottom: 15px;
+		}
+
+		.regis{
+			margin-bottom: 10px;
+
+			.ant-form-item-control{
+				line-height: 16px;
+				display: flex;
+				flex-direction: row;
+
+				.login-form-forgot{
+					margin-right: 5px;
+					flex: 1;
+					text-align: right;
+				}
+			}
+		}
+
+		.login-form-button{
+			width: 100%;
+		}
+	}
 }
-#root .loginForm{
-	background: #fff;
-	padding: 25px 25px 50px;
-}
-#root .ant-form{
-	width: 250px;
-}
-.loginTitle{
-	font-size: 16px;
-	padding-bottom: 15px;
-}
-#root .regis{
-	margin-bottom: 10px;
-}
-#root .regis .ant-form-item-control{
-	line-height: 16px;
-	display: flex;
-	flex-direction: row;
-}
-#root .login-form-forgot{
-	margin-right: 5px;
-	flex: 1;
-	text-align: right;
-}
-#root .login-form-button{
-	width: 100%;
-}
+
+

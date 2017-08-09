@@ -10,17 +10,11 @@ import { toggle, testFetch } from '../redux/createAction.js'
 
 @connect(state => ({
     collapsed: state.collapsed,
-    sideMenu: state.sideMenu
 }), dispatch => ({
     onToggle: () => {
         dispatch(toggle())
-        dispatch({
-            type: 'INCREMENT_ASYNC'
-        })
+        // dispatch(testFetch())
     }
-    // testFetch: () => {
-    //  dispatch(testFetch())
-    // }
 }))
 class Home extends React.Component {
 	constructor(props){
@@ -29,10 +23,10 @@ class Home extends React.Component {
     render() {
         return (
             <Layout className = 'layoutWrapper'>
-                <Sidebar collapsed = {this.props.collapsed} menu = {this.props.sideMenu}/>
+                <Sidebar collapsed = {this.props.collapsed}/>
                 <Layout>
                     <Header collapsed = {this.props.collapsed} toggle = {this.props.onToggle}/>
-                    <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
+                    <Content className = 'layoutContent'>
                         {this.props.children}
                     </Content>
                 </Layout>
@@ -40,4 +34,5 @@ class Home extends React.Component {
         )
     }
 }
+
 export default Home

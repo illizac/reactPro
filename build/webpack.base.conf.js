@@ -1,4 +1,5 @@
 var htmlPlugin = require('html-webpack-plugin')
+var ExtractTextPlugin = require('extract-text-webpack-plugin') 
 var webpack = require('webpack')
 var resolve = require('path').resolve
 
