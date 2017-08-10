@@ -82,11 +82,6 @@ class Sidebar extends React.Component{
         )
     }
 }
-	
-
-// Sidebar.propTypes = {
-//     collapsed: propTypes.bool.isRequired
-// }
 
 export default Sidebar
 
