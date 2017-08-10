@@ -10,7 +10,7 @@ const testMenu = [
                 path: 'home/userManage',
                 text: '用户管理'
             },{
-                path: '/',
+                path: 'home/characterManage',
                 text: '角色管理'
             },{
                 path: '/',

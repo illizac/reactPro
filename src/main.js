@@ -13,6 +13,7 @@ import './assets/style/main.less'
 import Page from './page.jsx'
 import Login from './pages/login.jsx'
 import UserManage from './pages/userManage/userManage.jsx'
+import CharacterManage from './pages/characterManage/characterManage.jsx'
 
 //saga replace thunk
 // <Route path = {'/home'} component = {Home} onEnter = {() => store.dispatch(getSideMenu())}>  
@@ -22,6 +23,7 @@ const routeConfig = (
 		<IndexRedirect to="/home/userManage" />
 		<Route path = {'/home'} component = {Home}>
 			<Route path = {'userManage'} component = {UserManage}/>
+			<Route path = {'characterManage'} component = {CharacterManage}/>
 		</Route>
 		<Route path = {'/login'} component = {Login}/>
 	</Route>

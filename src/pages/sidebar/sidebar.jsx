@@ -16,11 +16,18 @@ class Sidebar extends React.Component{
         super(props);
     }
     state = {
-        openKeys: []
+        openKeys: [],
+        defaultSelectedKeys: '',
+        defaultOpenKeys: ''
     }
     onOpenChange = (openKeys) => {
         const latestOpenKey = openKeys.find(key => !(this.state.openKeys.indexOf(key) > -1));
         this.setState({ openKeys: latestOpenKey ? [latestOpenKey] : [] });
+    }
+    componentWillMount(){
+        this.props.sideMenu.map((val, index) => val.subMenu.map((item, key) => 
+            location.hash.substring(2, location.hash.length) === item.path ? this.setState({defaultSelectedKeys: `${index}sub${key}`, defaultOpenKeys: `${index}submenu`}) : ''
+        ))
     }
     render(){
         return (
@@ -34,11 +41,17 @@ class Sidebar extends React.Component{
                 <QueueAnim
                 component = {Menu}
                 type='left'
-                componentProps = {{theme:"dark", mode:"inline", defaultSelectedKeys:['0sub0'], onOpenChange: this.onOpenChange, openKeys: this.state.openKeys }}>
+                componentProps = {{
+                    theme:"dark", 
+                    mode:"inline", 
+                    defaultSelectedKeys:[this.state.defaultSelectedKeys], 
+                    defaultOpenKeys: [this.state.defaultOpenKeys],
+                    onOpenChange: this.onOpenChange, openKeys: this.state.openKeys 
+                }}>
                     {
                         this.props.sideMenu.map((val,index) => 
                             val.subMenu ? 
-                            <SubMenu key = {index} 
+                            <SubMenu key = {`${index}submenu`} 
                             title={
                                 <span>
                                     <Icon type={val.type} />

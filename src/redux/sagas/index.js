@@ -1,5 +1,5 @@
-import { watchIncrementAsync } from './fetchSagas.js'
+import { fetchUserTableData, fetchCharacterTableData } from './fetchSagas.js'
 import { getSideMenu } from './getSideMenu.js'
 
-export default [ watchIncrementAsync, getSideMenu ]
+export default [ fetchUserTableData, getSideMenu, fetchCharacterTableData ]
 

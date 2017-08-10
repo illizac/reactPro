@@ -1,32 +1,14 @@
 //commonAction
-
 export const CHANGE_TOGGLE = 'CHANGE_TOGGLE'
-
 export const START_POST = 'START_POST'
-export const SUCCESS_POST = 'SUCCESS_POST'
-
-export const toggle = () => ({
-	type: CHANGE_TOGGLE
-})
-
-export const startRe = () => ({
-	type: START_POST
-})
-
-export const successRe = json => ({
-	type: SUCCESS_POST,
-	data: json
-})
 
 //-----------------------------------------------------------------------------------------------------------------------//
 //fetchAction
-
-export const INCREMENT_ASYNC = 'INCREMENT_ASYNC'
 export const GET_MENU = 'GET_MENU'
-
-export const testFetch = () => ({
-	type: INCREMENT_ASYNC
-})
+export const FETCH_USER_TABLE = 'FETCH_USER_TABLE'
+export const FETCH_USER_SUCCESS = 'FETCH_USER_SUCCESS'
+export const FETCH_CHARACTER_TABLE = 'FETCH_CHARACTER_TABLE'
+export const FETCH_CHARACTER_SUCCESS = 'FETCH_CHARACTER_SUCCESS'
 
 export const getMenu = json => ({
 	type: GET_MENU,

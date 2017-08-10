@@ -6,14 +6,15 @@ const { Content } = Layout
 import Sidebar from './sidebar/sidebar.jsx'
 import Header from './header/header.jsx'
 
-import { toggle, testFetch } from '../redux/createAction.js'
+import { CHANGE_TOGGLE } from '../redux/createAction.js'
 
 @connect(state => ({
     collapsed: state.collapsed,
 }), dispatch => ({
     onToggle: () => {
-        dispatch(toggle())
-        // dispatch(testFetch())
+        dispatch({
+            type: CHANGE_TOGGLE
+        })
     }
 }))
 class Home extends React.Component {
