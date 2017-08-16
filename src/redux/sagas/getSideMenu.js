@@ -16,7 +16,7 @@ const testMenu = [
                 path: '/',
                 text: '菜单管理'
             },{
-                path: '/',
+                path: 'home/organizationManage',
                 text: '机构管理'
             }
         ]

@@ -5,7 +5,7 @@ const TabPane = Tabs.TabPane
 const Search = Input.Search
 import { FETCH_USER_TABLE } from '../../redux/createAction'
 import UserTable from '../Components/userTable.jsx'
-import UserForm from '../Components/userForm.jsx'
+import UserForm from './userForm.jsx'
 import CompanyTree from '../Components/companyTree.jsx'
 
 

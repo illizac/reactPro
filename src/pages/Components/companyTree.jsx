@@ -9,28 +9,29 @@ class CompanyTree extends React.Component{
 		super(props);
 		
 	}
+	state = {
+		list: [{
+			title: '山东省总公司',
+			subList: [
+				{title:'公司领导'},{title:'综合部'},{title:'济南市分公司',subList:[{title:'公司领导'},{title:'综合部'},{title:'历城区分公司',subList:[{title:'公司领导'},{title:'综合部'}]}]}
+			]
+		}]
+	}
 
 	render(){
 		return (
 			<Tree
 		      showLine
-		      defaultExpandedKeys={['0-0-0']}
+		      defaultExpandAll = {true}
 		      onSelect={this.onSelect}
 		    >
-		      	<TreeNode title="parent 1" key="0-0">
-		      	  	<TreeNode title="parent 1-0" key="0-0-0">
-		      	  	  	<TreeNode title="leaf" key="0-0-0-0" />
-		      	  	  	<TreeNode title="leaf" key="0-0-0-1" />
-		      	  	  	<TreeNode title="leaf" key="0-0-0-2" />
-		      	  	</TreeNode>
-		      	  	<TreeNode title="parent 1-1" key="0-0-1">
-		      	  	  	<TreeNode title="leaf" key="0-0-1-0" />
-		      	  	</TreeNode>
-		      	  	<TreeNode title="parent 1-2" key="0-0-2">
-		      	  	  	<TreeNode title="leaf" key="0-0-2-0" />
-		      	  	  	<TreeNode title="leaf" key="0-0-2-1" />
-		      	  	</TreeNode>
-		      	</TreeNode>
+		      	{(f => f(f))(f => list => list.map((val,index) => val.subList ? (
+		      		<TreeNode title={val.title} key={`${val.title}-${index}`}>
+		      			{f(f)(val.subList)}
+		      		</TreeNode>
+		      	) : (
+					<TreeNode title={val.title} key={`${val.title}-${index}`} />
+		      	) ))(this.state.list)}
 		    </Tree>
 		)
 	}

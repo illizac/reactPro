@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Form, Input, Icon, Select, Radio, Row, Col, Button } from 'antd'
+import SelectRen from '../Components/select.jsx'
 const FormItem = Form.Item
 const Option = Select.Option
 const RadioGroup = Radio.Group
@@ -91,20 +92,13 @@ class UserForm extends React.Component{
 				label = '是否允许登录'
 				labelCol = {{span:4}}
 				wrapperCol = {{span:8}}>
-					<Select defaultValue="是" style={{ width: 120 }}>
-    				  	<Option value="是">是</Option>
-    				  	<Option value="否">否</Option>
-    				</Select>
+					<SelectRen list = {['是', '否']}></SelectRen>
 				</FormItem>
 				<FormItem
 				label = '用户类型'
 				labelCol = {{span:4}}
 				wrapperCol = {{span:8}}>
-					<Select defaultValue="请选择" style={{ width: 200 }}>
-    				  	<Option value="系统管理">系统管理</Option>
-    				  	<Option value="部门管理">部门管理</Option>
-    				  	<Option value="普通用户">普通用户</Option>
-    				</Select>
+					<SelectRen list = {['系统管理', '部门管理', '普通用户']} defaultKey = '请选择' width = {200}></SelectRen>
 				</FormItem>
 				<FormItem
 				label = '用户角色'

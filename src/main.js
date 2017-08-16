@@ -14,6 +14,7 @@ import Page from './page.jsx'
 import Login from './pages/login.jsx'
 import UserManage from './pages/userManage/userManage.jsx'
 import CharacterManage from './pages/characterManage/characterManage.jsx'
+import OrganizationManage from './pages/organizationManage/organizationManage.jsx'
 
 //saga replace thunk
 // <Route path = {'/home'} component = {Home} onEnter = {() => store.dispatch(getSideMenu())}>  
@@ -24,6 +25,7 @@ const routeConfig = (
 		<Route path = {'/home'} component = {Home}>
 			<Route path = {'userManage'} component = {UserManage}/>
 			<Route path = {'characterManage'} component = {CharacterManage}/>
+			<Route path = {'organizationManage'} component = {OrganizationManage}/>
 		</Route>
 		<Route path = {'/login'} component = {Login}/>
 	</Route>
